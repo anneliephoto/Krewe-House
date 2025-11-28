@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Playball&display=swap");
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Cinzel Decorative", cursive;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Add padding so content starts under the fixed header */
+body {
+  padding-top: 100px;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+}
+
+.footer {
+  background: #8000805b;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: auto; /* ✅ pushes footer to bottom */
+}
+
+.footer p {
+  font-weight: 300;
+  color: #008000;
+  font-family: "Cinzel Decorative", cursive;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  white-space: nowrap; /* ✅ Prevents “Krewe” wrapping */
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.krewe {
+  font-family: "Cinzel Decorative", cursive;
+}
+
+.k {
+  color: #800080;
+}
+.r {
+  color: #008000;
+}
+.e1 {
+  color: #ffd700;
+}
+.w {
+  color: #800080;
+}
+.e2 {
+  color: #008000;
+}
+
+.house {
+  font-family: "Playball", cursive;
+  background: linear-gradient(90deg, #ffd700, #ffb347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 6px;
+  font-weight: 400;
+}
+
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  padding-right: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: purple;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-family: "Cinzel Decorative", cursive;
+}
+
+.nav-links a:hover {
+  color: #008000;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1001;
+  position: relative;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #008000;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* RESPONSIVE NAV */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    padding: 20px 0;
+    gap: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.4s ease;
+  }
+
+  .nav-links.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-links a {
+    color: #800080;
+    padding: 10px 0;
+  }
+
+  .nav-links a:hover {
+    color: #008000;
+  }
+}
+.banner-text h2 {
+  color: purple;
+  text-align: center;
+  font-size: 2.5em;
+  padding-top: 0px;
+  margin-top: 0px;
+}
+
+.banner-text p {
+  color: purple;
+  padding: 20px;
+  text-align: center;
+  justify-content: center;
+  font-family: "Playball", cursive;
+  font-size: larger;
+  font-weight: 1px;
+}
+.banner img {
+  object-fit: cover;
+  padding-bottom: 80px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 100px;
+}
+.content-image img {
+  margin-left: 100px;
+}

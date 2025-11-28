@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <link rel="stylesheet" href="dining.css" class="stylesheet" />
+  </head>
+  <body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="index.html">
+          <span class="krewe">
+            <span class="k">K</span>
+            <span class="r">r</span>
+            <span class="e1">e</span>
+            <span class="w">w</span>
+            <span class="e2">e</span>
+          </span>
+          <span class="house"> House</span>
+        </a>
+      </div>
+
+      <!-- Hamburger icon -->
+      <div class="menu-toggle" id="menu-toggle">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <!-- Navigation links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="dining.html">Dining</a></li>
+        <li><a href="location.html">Location</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="banner">
+      <img src="images/exterior.PNG" />
+         <div class="banner-text">
+  
+        <p></p>
+      </div>
+    </div>
+
+    <!-- 3 Image Boxes -->
+    <section class="image-row">
+      <div class="image-box">
+        <img src="images/mbanner.png" />
+        <h2>Krewe Kitchen</h2>
+        <p>Upscale dining with balcony views and elegant Creole dishes.</p>
+         <div class="lower-section">
+        <h3>VIP Booths</h3>
+        <div class="small-img-grid">
+          <div class="small-box">
+            <img src="images/zulu.png" />
+            <p>Zulu</p>
+          </div>
+
+          <div class="small-box">
+            <img src="images/Endymion.png" />
+            <p>Endymion</p>
+          </div>
+          <div class="small-box">
+            <img src="images/rex.PNG" alt="" />
+            <p>Rex</p>
+          </div>
+        </div>
+      </div>
+      </div>
+
+      <div class="image-box">
+        <img src="images/foodtruck.PNG" />
+        <h2>Bourbon & Beignets</h2>
+        <p>Luxury food truck serving Mardi Gras favorites indoors.</p>
+   <div class="lower-section">
+        <h3>The Food</h3>
+        <div class="small-img-grid">
+          <div class="small-box">
+            <img src="images/poboy.png" />
+            <p>Poboys</p>
+          </div>
+
+          <div class="small-box">
+            <img src="images/beignets.png" />
+            <p>Beignets</p>
+          </div>
+          <div class="small-box">
+            <img src="images/kingcake.png" />
+            <p>King Cake</p>
+          </div>
+        </div>
+      </div>
+
+      </div>
+
+      <div class="image-box">
+        <img src="images/bandb.png" />
+        <h2>Bead & Bean</h2>
+        <p>Modern café with espresso, art, and bead-inspired décor.</p>
+  
+   <div class="lower-section">
+        <h3>Relax & Recharge</h3>
+        <div class="small-img-grid">
+          <div class="small-box">
+            <img src="images/martini.PNG" alt="" />
+            <p>Espresso Martini</p>
+          </div>
+          <div class="small-box">
+            <img src="images/swing.png" alt="" />
+            <p>Swing</p>
+          </div>
+          <div class="small-box">
+            <img src="images/patio.PNG" alt="" />
+            <p>Patio</p>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+   <div class="footer">
+      <p>Design and code by AnnelieStudio</p>
+    </div>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+    });
+  });
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,302 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Playball&display=swap");
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Cinzel Decorative", cursive;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  z-index: 1000;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10px;
+  background-color: rgba(255, 255, 255, 0.068); /* translucent */
+  backdrop-filter: blur(2px);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* LOGO */
+.logo {
+  display: flex;
+  align-items: center;
+  white-space: nowrap; /* ✅ Prevents “Krewe” wrapping */
+  font-size: 2.3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.krewe {
+  font-family: "Cinzel Decorative", cursive;
+}
+
+.k {
+  color: #800080;
+}
+.r {
+  color: #008000;
+}
+.e1 {
+  color: #ffd700;
+}
+.w {
+  color: #800080;
+}
+.e2 {
+  color: #008000;
+}
+
+.house {
+  font-family: "Playball", cursive;
+  background: linear-gradient(90deg, #ffd700, #ffb347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 6px;
+  font-weight: 400;
+}
+
+/* NAV LINKS */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  padding-right: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: purple;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-family: "Cinzel Decorative", cursive;
+}
+
+.nav-links a:hover {
+  color: #008000;
+}
+.banner img {
+  width: 110%;
+  height: 180%;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  z-index: 1001;
+  position: relative;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #008000;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* RESPONSIVE NAV */
+@media (max-width: 699px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    padding: 20px 0;
+    gap: 20px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.4s ease;
+  }
+
+  .nav-links.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav-links a {
+    color: #800080;
+    padding: 10px 0;
+  }
+
+  .nav-links a:hover {
+    color: #008000;
+  }
+}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #111;
+  color: #f8f8f8;
+}
+
+/* Banner */
+.banner img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+}
+h1 {
+  font-family: "Cinzel Decorative", cursive;
+  font-size: 2.5em;
+  justify-content: center;
+  text-align: center;
+  color: antiquewhite;
+}
+/* Top 3 Image Boxes */
+.image-row {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  margin: 3rem auto;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+.image-box {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.image-box img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 10px;
+  border-style: double;
+  border-color: antiquewhite;
+}
+
+.image-box h2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: antiquewhite;
+  font-family: "Cinzel Decorative", cursive;
+}
+
+.image-box p {
+  margin-top: 0.5rem;
+  color: antiquewhite;
+  font-family: "Playball", cursive;
+}
+
+/* Lower Row (3 sections horizontally) */
+.lower-row {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+  flex-wrap: wrap;
+}
+
+.lower-section {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.lower-section h3 {
+  color: antiquewhite;
+  font-family: "Cinzel Decorative", cursive;
+  margin-bottom: 1rem;
+  padding-top: 150px;
+}
+
+/* 4 Small Image Boxes */
+.small-img-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.small-img-grid img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.small-img-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.small-box {
+  text-align: center;
+}
+
+.small-box img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+  border-style: double;
+  border-color: antiquewhite;
+}
+
+.small-box p {
+  margin-top: 0.4rem;
+  font-size: 0.9rem;
+  color: antiquewhite;
+  font-family: "Playball", cursive;
+}
+.footer {
+  background: #8000805b;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer p {
+  font-weight: 300;
+  color: #008000;
+  font-family: "Cinzel Decorative", cursive;
+}
