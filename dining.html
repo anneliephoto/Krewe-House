@@ -42,7 +42,7 @@
 
   <main>
     <div class="banner">
-      <img src="images/diningbanner.PNG" />
+      <img src="images/diningbanner.PNG" alt="Dining banner" class="gallery-image" />
          <div class="banner-text">
   
         <p></p>
@@ -52,23 +52,23 @@
     <!-- 3 Image Boxes -->
     <section class="image-row">
       <div class="image-box">
-        <img src="images/mbanner.png" />
+        <img src="images/mbanner.png" alt="Krewe Kitchen" class="gallery-image" />
         <h2>Krewe Kitchen</h2>
         <p>Upscale dining with balcony views and elegant Creole dishes.</p>
          <div class="lower-section">
         <h3>VIP Booths</h3>
         <div class="small-img-grid">
           <div class="small-box">
-            <img src="images/zulu.png" />
+            <img src="images/zulu.png" alt="Zulu booth" class="gallery-image" />
             <p>Zulu</p>
           </div>
 
           <div class="small-box">
-            <img src="images/endymion.png" />
+            <img src="images/endymion.png" alt="Endymion booth" class="gallery-image" />
             <p>Endymion</p>
           </div>
           <div class="small-box">
-            <img src="images/rex.PNG" alt="" />
+            <img src="images/rex.PNG" alt="Rex booth" class="gallery-image" />
             <p>Rex</p>
           </div>
         </div>
@@ -76,23 +76,23 @@
       </div>
 
       <div class="image-box">
-        <img src="images/foodtruck.PNG" />
+        <img src="images/foodtruck.PNG" alt="Bourbon & Beignets" class="gallery-image" />
         <h2>Bourbon & Beignets</h2>
         <p>Luxury food truck serving Mardi Gras favorites indoors.</p>
    <div class="lower-section">
         <h3>The Food</h3>
         <div class="small-img-grid">
           <div class="small-box">
-            <img src="images/poboy.png" />
+            <img src="images/poboy.png" alt="Poboys" class="gallery-image" />
             <p>Poboys</p>
           </div>
 
           <div class="small-box">
-            <img src="images/beignets.png" />
+            <img src="images/beignets.png" alt="Beignets" class="gallery-image" />
             <p>Beignets</p>
           </div>
           <div class="small-box">
-            <img src="images/kingcake.png" />
+            <img src="images/kingcake.png" alt="King cake" class="gallery-image" />
             <p>King Cake</p>
           </div>
         </div>
@@ -101,7 +101,7 @@
       </div>
 
       <div class="image-box">
-        <img src="images/bandb.png" />
+        <img src="images/updatedbandbb.PNG" alt="Bead & Bean" class="gallery-image" />
         <h2>Bead & Bean</h2>
         <p>Modern café with espresso, art, and bead-inspired décor.</p>
   
@@ -109,16 +109,16 @@
         <h3>Relax & Recharge</h3>
         <div class="small-img-grid">
           <div class="small-box">
-            <img src="images/espresso.PNG" alt="" />
+            <img src="images/bandbswing.jpg" alt="Coffee shop swing" class="gallery-image" />
+            <p>Dat Swing</p>
+          </div>
+          <div class="small-box">
+            <img src="images/espresso.PNG" alt="Espresso martini" class="gallery-image" />
             <p>Espresso Martini</p>
           </div>
           <div class="small-box">
-            <img src="images/swing.png" alt="" />
-            <p>Swing</p>
-          </div>
-          <div class="small-box">
-            <img src="images/patio.PNG" alt="" />
-            <p>Patio</p>
+            <img src="images/bandblatte.jpg" alt="Coffee shop display" class="gallery-image" />
+            <p>Latte</p>
           </div>
         </div>
       </div>
@@ -130,13 +130,49 @@
    <div class="footer">
       <p>Design and code by AnnelieStudio</p>
     </div>
+
+    <div id="image-modal" class="image-modal" aria-hidden="true">
+      <span class="image-modal-close" id="image-modal-close">&times;</span>
+      <img id="image-modal-img" src="" alt="Expanded dining image" />
+    </div>
 <script>
   document.addEventListener("DOMContentLoaded", () => {
     const menuToggle = document.getElementById("menu-toggle");
     const navLinks = document.getElementById("nav-links");
+    const modal = document.getElementById("image-modal");
+    const modalImg = document.getElementById("image-modal-img");
+    const closeBtn = document.getElementById("image-modal-close");
+    const galleryImages = document.querySelectorAll(".gallery-image");
 
     menuToggle.addEventListener("click", () => {
       navLinks.classList.toggle("active");
+    });
+
+    galleryImages.forEach((img) => {
+      img.addEventListener("click", () => {
+        modalImg.src = img.src;
+        modalImg.alt = img.alt || "Dining image";
+        modal.classList.add("active");
+        modal.setAttribute("aria-hidden", "false");
+      });
+    });
+
+    const closeModal = () => {
+      modal.classList.remove("active");
+      modal.setAttribute("aria-hidden", "true");
+    };
+
+    closeBtn.addEventListener("click", closeModal);
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        closeModal();
+      }
     });
   });
 </script>

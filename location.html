@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Location | Krewe House</title>
     <link rel="stylesheet" href="location.css" class="stylesheet" />
   </head>
   <body>
@@ -22,14 +22,12 @@
           </a>
         </div>
 
-        <!-- Hamburger icon -->
         <div class="menu-toggle" id="menu-toggle">
           <div class="bar"></div>
           <div class="bar"></div>
           <div class="bar"></div>
         </div>
 
-        <!-- Navigation links -->
         <ul class="nav-links" id="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="events.html">Events</a></li>
@@ -41,38 +39,32 @@
     </header>
 
     <section class="banner">
-      <img src="images/outside.png" />
+      <img src="images/locationbanner.png" alt="Location banner" />
       <div class="banner-text">
-        <h2>Location</h2>
         <p>
-          Krewe House is situated in the garden district in walking distance of
-          the famous St.Charles street car line. The parade floats are scheduled
-          to begin each parade at krewe house, so people of all ages can enjoy
-          Mardi Gras without the stress of finding parking, a bathroom, and a
-          good spot to catch your beads!! Krewe House is designed to accomodate
-          those who wish to have dinner while they watch the floats go by, and
-          the people who simply want to catch as many beads as possible.
+          Krewe House sits in the Garden District, just a short walk from the
+          iconic St. Charles streetcar line. It is an easy, festive destination
+          for families and revelers alike, with the parade route beginning right
+          here for a seamless Mardi Gras experience.
         </p>
       </div>
     </section>
 
-    <div class content>
-      <div class="content-image">
-        <img src="images/map.jpg" />
+    <section class="map-section">
+      <div class="map-card">
+        <img src="images/map.jpg" alt="Map showing the location of Krewe House" />
       </div>
-    </div>
+    </section>
 
     <div class="footer">
       <p>Design and code by AnnelieStudio</p>
     </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        const menuToggle = document.getElementById("menu-toggle");
-        const navLinks = document.getElementById("nav-links");
 
-        menuToggle.addEventListener("click", () => {
-          navLinks.classList.toggle("active");
-        });
+    <script>
+      const menuToggle = document.getElementById("menu-toggle");
+      const navLinks = document.getElementById("nav-links");
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
       });
     </script>
   </body>
