@@ -256,6 +256,31 @@ body {
   gap: 1.5rem;
 }
 
+@media (max-width: 768px) {
+  .gallery-section {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(78vw, 78vw);
+    grid-template-columns: none;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding: 0 0.25rem 0.5rem;
+  }
+
+  .gallery-card {
+    scroll-snap-align: start;
+    margin: 0;
+  }
+}
+
 .gallery-card {
   background: rgba(255, 255, 255, 0.18);
   backdrop-filter: blur(4px);

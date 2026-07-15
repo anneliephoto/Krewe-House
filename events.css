@@ -11,6 +11,7 @@ html,
 body {
   width: 100%;
   overflow-x: hidden;
+  overflow-y: auto;
   font-family: "Cinzel Decorative", cursive;
 }
 
@@ -208,6 +209,13 @@ body {
   padding-top: 95px; /* ✅ keeps content below navbar */
   font-family: "Cinzel Decorative", cursive;
   color: #008000;
+  background-color: #f5efe2;
+  background-image:
+    linear-gradient(rgba(245, 239, 226, 0.82), rgba(245, 239, 226, 0.82)),
+    url("images/events background.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
   overflow-x: hidden; /* ✅ stop horizontal cutoff */
 }
 
@@ -223,6 +231,10 @@ h1 {
   margin-bottom: 30px;
   text-align: center;
   padding-top: 100px;
+}
+
+.event-title span {
+  display: inline-block;
 }
 
 /* ----- CALENDAR GRID ----- */
